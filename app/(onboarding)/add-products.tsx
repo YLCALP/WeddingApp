@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import { Toast, useToast } from '../../components/common';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { supabase } from '../../lib/supabase';
 import { useEventStore } from '../../store';
 import { useAuthStore } from '../../store/authStore';
@@ -705,16 +706,17 @@ const styles = StyleSheet.create({
   step: {
     fontSize: 14,
     color: Colors.light.primary,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
   },
   title: {
     fontSize: 28,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
   },
   subtitle: {
     fontSize: 15,
     color: Colors.light.textSecondary,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   categoriesContainer: {
     borderBottomWidth: 1,
@@ -733,12 +735,12 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     fontSize: 15,
-    fontWeight: '500',
+    fontFamily: Typography.fontFamily.serifRegular,
     color: Colors.light.textMuted
   },
   categoryTextActive: {
     color: Colors.light.primary,
-    fontWeight: '600'
+    fontFamily: Typography.fontFamily.serif
   },
   scrollContent: {
     paddingHorizontal: 24,
@@ -776,7 +778,7 @@ const styles = StyleSheet.create({
   },
   productName: {
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
   },
   productNameSelected: {
@@ -786,10 +788,11 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: Colors.light.textSecondary,
     marginTop: 4,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   productPrice: {
     fontSize: 15,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
   },
   productPriceSelected: {
@@ -803,7 +806,8 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     borderRadius: 4,
     marginLeft: 8,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   addButton: {
     width: 36,
@@ -823,7 +827,7 @@ const styles = StyleSheet.create({
   },
   badgeText: {
     color: '#fff',
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     fontSize: 14
   },
   emptyState: {
@@ -833,6 +837,7 @@ const styles = StyleSheet.create({
   emptyText: {
     color: Colors.light.textSecondary,
     textAlign: 'center',
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   bottomContainer: {
     position: 'absolute',
@@ -856,11 +861,12 @@ const styles = StyleSheet.create({
   },
   totalLabel: {
     fontSize: 12,
-    color: Colors.light.textMuted
+    color: Colors.light.textMuted,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   totalAmount: {
     fontSize: 20,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.primary
   },
   button: {
@@ -876,7 +882,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
   },
 
   // Modal Styles
@@ -901,20 +907,21 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 20,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text
   },
   modalDesc: {
     fontSize: 14,
     color: Colors.light.textSecondary,
-    marginBottom: 20
+    marginBottom: 20,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   modalSection: {
     marginBottom: 20
   },
   sectionLabel: {
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
     marginBottom: 8,
     color: Colors.light.text
   },
@@ -935,14 +942,15 @@ const styles = StyleSheet.create({
   },
   qtyText: {
     fontSize: 20,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
     minWidth: 30,
     textAlign: 'center'
   },
   helperText: {
     fontSize: 13,
     color: Colors.light.textMuted,
-    marginBottom: 8
+    marginBottom: 8,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   textArea: {
     backgroundColor: Colors.light.surface,
@@ -951,11 +959,12 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 12,
     minHeight: 100,
-    textAlignVertical: 'top'
+    textAlignVertical: 'top',
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   modalPrice: {
     fontSize: 18,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.primary,
     textAlign: 'right',
     marginTop: 10,
@@ -978,7 +987,7 @@ const styles = StyleSheet.create({
   },
   confirmBtnText: {
     color: '#fff',
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
     fontSize: 16
   },
   removeBtn: {
@@ -990,7 +999,8 @@ const styles = StyleSheet.create({
     borderColor: Colors.light.border
   },
   cancelBtnText: {
-    color: Colors.light.text
+    color: Colors.light.text,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   summaryItem: {
     flexDirection: 'row',

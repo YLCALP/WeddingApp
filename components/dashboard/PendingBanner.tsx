@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface PendingBannerProps {
     purchaseId: string;
@@ -48,11 +49,12 @@ const styles = StyleSheet.create({
     },
     pendingBannerTitle: {
         fontSize: 14,
-        fontWeight: '600',
         color: Colors.light.text,
+        fontFamily: Typography.fontFamily.serif,
     },
     pendingBannerText: {
         fontSize: 12,
         color: Colors.light.textSecondary,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
 });

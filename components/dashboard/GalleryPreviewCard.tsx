@@ -3,6 +3,7 @@ import { Image } from 'expo-image';
 import { router } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface GalleryPreviewCardProps {
     totalMedia: number;
@@ -78,12 +79,13 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 24,
-        fontWeight: '700',
         color: '#fff',
         marginBottom: 4,
+        fontFamily: Typography.fontFamily.serif,
     },
     subtitle: {
         fontSize: 14,
         color: 'rgba(255,255,255,0.9)',
+        fontFamily: Typography.fontFamily.serifRegular,
     },
 });

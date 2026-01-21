@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 const { width } = Dimensions.get('window');
 const COLUMN_COUNT = 3;
@@ -84,6 +85,7 @@ const styles = StyleSheet.create({
     },
     notePreview: {
         fontSize: 12,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.text,
         textAlign: 'center',
         marginTop: 4,

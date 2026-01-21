@@ -11,6 +11,7 @@ import {
     View,
 } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface ToastState {
     visible: boolean;
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
     },
     modalTitle: {
         fontSize: 20,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     inputContainer: {
@@ -148,7 +149,8 @@ const styles = StyleSheet.create({
     },
     label: {
         fontSize: 14,
-        fontWeight: '500',
+        fontFamily: Typography.fontFamily.serif,
+        fontWeight: '500', // keeping for weight if font supports it or fallback
         color: Colors.light.textSecondary,
         marginBottom: 8,
     },
@@ -159,6 +161,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         paddingHorizontal: 16,
         fontSize: 16,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.text,
         backgroundColor: Colors.light.surface,
     },
@@ -169,6 +172,7 @@ const styles = StyleSheet.create({
     helperText: {
         fontSize: 12,
         color: Colors.light.textMuted,
+        fontFamily: Typography.fontFamily.serifRegular,
         marginTop: 6,
     },
     saveButton: {
@@ -181,7 +185,7 @@ const styles = StyleSheet.create({
     },
     saveButtonText: {
         fontSize: 17,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: '#fff',
     },
     modalToast: {
@@ -206,6 +210,6 @@ const styles = StyleSheet.create({
     modalToastText: {
         color: '#fff',
         fontSize: 15,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
 });

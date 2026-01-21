@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface StorageCardProps {
     usedBytes: number;
@@ -90,12 +91,13 @@ const styles = StyleSheet.create({
     },
     storageTitle: {
         fontSize: 14,
-        fontWeight: '600',
         color: Colors.light.text,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     storageUsage: {
         fontSize: 14,
         color: Colors.light.textSecondary,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     progressBar: {
         height: 8,
@@ -111,12 +113,14 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: Colors.light.warning,
         marginTop: 4,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     storagePercentage: {
         fontSize: 12,
         color: Colors.light.textSecondary,
         marginTop: 8,
         textAlign: 'right',
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     unlimitedBar: {
         paddingVertical: 8,
@@ -134,5 +138,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '600',
         color: Colors.light.primary,
+        fontFamily: Typography.fontFamily.serif,
     },
 });

@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 const { width } = Dimensions.get('window');
 
@@ -75,9 +76,9 @@ export function MediaStatsGrid({ stats }: MediaStatsGridProps) {
 const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 18,
-        fontWeight: '600',
         color: Colors.light.text,
         marginBottom: 16,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     statsGrid: {
         flexDirection: 'row',
@@ -102,12 +103,13 @@ const styles = StyleSheet.create({
     },
     statValue: {
         fontSize: 28,
-        fontWeight: '700',
         color: Colors.light.text,
+        fontFamily: Typography.fontFamily.serif,
     },
     statLabel: {
         fontSize: 13,
         color: Colors.light.textSecondary,
         marginTop: 4,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
 });

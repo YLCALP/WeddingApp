@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 type MediaType = 'all' | 'photo' | 'video' | 'audio' | 'note';
 
@@ -61,11 +62,12 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 28,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     subtitle: {
         fontSize: 14,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textSecondary,
         marginBottom: 16,
     },
@@ -93,6 +95,7 @@ const styles = StyleSheet.create({
     filterText: {
         fontSize: 14,
         color: Colors.light.textSecondary,
+        fontFamily: Typography.fontFamily.serifRegular,
         fontWeight: '500',
     },
     activeFilterText: {

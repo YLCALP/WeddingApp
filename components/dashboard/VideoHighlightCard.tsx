@@ -1,8 +1,8 @@
-import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useVideoPlayer, VideoView } from 'expo-video';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface VideoHighlightCardProps {
     coverImage?: string; // Can be image URL (if we have a photo fallback)
@@ -10,20 +10,23 @@ interface VideoHighlightCardProps {
 }
 
 export function VideoHighlightCard({ coverImage, videoSource }: VideoHighlightCardProps) {
-    // If we have a video source, setup the player
-    const player = useVideoPlayer(videoSource || '', (player) => {
+    const setupPlayer = (player: any) => {
         player.muted = true;
         player.loop = true;
-        // Auto-play if we want it to be alive, or just pause for thumb.
-        // User asked for "cover image", so maybe just paused at 0?
-        // But a moving video is cooler and "highlight"y. Let's try playing silently.
         if (videoSource) {
             player.play();
         }
-    });
+    };
+
+    // If we have a video source, setup the player
+    const player = useVideoPlayer(videoSource || '', setupPlayer);
+
+    const handlePress = () => {
+        router.push('/(tabs)/gallery');
+    };
 
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={handlePress} activeOpacity={0.9}>
             <View style={styles.thumbnailPlaceholder}>
                 {videoSource ? (
                     <VideoView
@@ -40,18 +43,13 @@ export function VideoHighlightCard({ coverImage, videoSource }: VideoHighlightCa
 
                 <View style={styles.overlay} />
 
-                <TouchableOpacity
-                    style={styles.playButton}
-                    onPress={() => router.push('/(tabs)/gallery')}
-                >
-                    <Ionicons name="play" size={32} color={Colors.light.primary} />
-                </TouchableOpacity>
+
 
                 <View style={styles.content}>
                     <Text style={styles.title}>Video Özetleri</Text>
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 
@@ -77,15 +75,7 @@ const styles = StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
         backgroundColor: 'rgba(0,0,0,0.4)',
     },
-    playButton: {
-        width: 64,
-        height: 64,
-        borderRadius: 32,
-        backgroundColor: 'rgba(255,255,255,0.9)',
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: 2,
-    },
+
     content: {
         position: 'absolute',
         bottom: 24,
@@ -94,7 +84,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 20,
-        fontWeight: '700',
         color: '#fff',
+        fontFamily: Typography.fontFamily.serif,
     },
 });

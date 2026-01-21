@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface NoEventViewProps {
     title?: string;
@@ -42,13 +43,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 24,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
         marginTop: 24,
         marginBottom: 12,
     },
     message: {
         fontSize: 15,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textSecondary,
         textAlign: 'center',
         lineHeight: 22,
@@ -66,6 +68,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: '#fff',
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
 });

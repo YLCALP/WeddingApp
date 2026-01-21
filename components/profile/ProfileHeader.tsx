@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 export function ProfileHeader() {
     return (
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 28,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
 });

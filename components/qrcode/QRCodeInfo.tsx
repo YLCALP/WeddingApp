@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface QRCodeInfoProps {
     qrUrl: string;
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
     },
     linkText: {
         fontSize: 13,
+        fontFamily: Typography.fontFamily.mono,
         color: Colors.light.textMuted,
         flex: 1,
         textAlign: 'center',
@@ -63,6 +65,7 @@ const styles = StyleSheet.create({
     infoText: {
         flex: 1,
         fontSize: 14,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.accent,
         lineHeight: 22,
     },

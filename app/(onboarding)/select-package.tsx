@@ -1,15 +1,16 @@
+import { Ionicons } from '@expo/vector-icons';
+import { router, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import {
-  View,
+  ActivityIndicator,
+  ScrollView,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  StyleSheet,
-  ScrollView,
-  ActivityIndicator,
+  View,
 } from 'react-native';
-import { router, useLocalSearchParams } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { supabase } from '../../lib/supabase';
 
 interface Package {
@@ -63,7 +64,7 @@ export default function SelectPackageScreen() {
 
   const handleContinue = () => {
     if (!selectedPackage) return;
-    
+
     router.push({
       pathname: '/(onboarding)/add-products',
       params: { eventId, packageId: selectedPackage },
@@ -210,18 +211,19 @@ const styles = StyleSheet.create({
   step: {
     fontSize: 14,
     color: Colors.light.primary,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
     marginBottom: 8,
   },
   title: {
     fontSize: 28,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 15,
     color: Colors.light.textSecondary,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   packagesContainer: {
     gap: 16,
@@ -253,7 +255,7 @@ const styles = StyleSheet.create({
   popularText: {
     color: '#fff',
     fontSize: 12,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
   },
   packageHeader: {
     flexDirection: 'row',
@@ -263,7 +265,7 @@ const styles = StyleSheet.create({
   },
   packageName: {
     fontSize: 20,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
   },
   packageNameSelected: {
@@ -274,7 +276,7 @@ const styles = StyleSheet.create({
   },
   packagePrice: {
     fontSize: 24,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
   },
   packagePriceSelected: {
@@ -284,6 +286,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: Colors.light.textSecondary,
     marginBottom: 16,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   storageContainer: {
     flexDirection: 'row',
@@ -298,7 +301,7 @@ const styles = StyleSheet.create({
   },
   storageText: {
     fontSize: 14,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.primary,
   },
   featuresContainer: {
@@ -312,6 +315,7 @@ const styles = StyleSheet.create({
   featureText: {
     fontSize: 14,
     color: Colors.light.text,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   selectedIndicator: {
     position: 'absolute',
@@ -326,6 +330,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
     fontSize: 16,
     color: Colors.light.textMuted,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   bottomContainer: {
     position: 'absolute',
@@ -353,6 +358,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 17,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
   },
 });

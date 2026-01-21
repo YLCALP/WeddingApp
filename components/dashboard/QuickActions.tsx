@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 export function QuickActions() {
     return (
@@ -31,9 +32,9 @@ export function QuickActions() {
 const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 18,
-        fontWeight: '600',
         color: Colors.light.text,
         marginBottom: 16,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     actionsContainer: {
         flexDirection: 'row',
@@ -50,8 +51,8 @@ const styles = StyleSheet.create({
     },
     actionText: {
         fontSize: 14,
-        fontWeight: '500',
         color: Colors.light.text,
         marginTop: 8,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
 });

@@ -1,11 +1,12 @@
-import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { Tabs } from 'expo-router';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { useEventStore } from '../../store';
 
 export default function TabLayout() {
   const { event, hasActivePackage } = useEventStore();
-  
+
   // Check if user has active package (either from current or previous purchase)
   const showTabs = event?.is_active && hasActivePackage;
 
@@ -30,7 +31,7 @@ export default function TabLayout() {
         },
         tabBarLabelStyle: {
           fontSize: 11,
-          fontWeight: '500',
+          fontFamily: Typography.fontFamily.serifRegular,
         },
       }}
     >
@@ -47,7 +48,7 @@ export default function TabLayout() {
           ),
         }}
       />
-      
+
       <Tabs.Screen
         name="gallery"
         options={{
@@ -62,7 +63,7 @@ export default function TabLayout() {
           ),
         }}
       />
-      
+
       <Tabs.Screen
         name="qr-code"
         options={{

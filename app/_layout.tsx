@@ -1,17 +1,27 @@
-import React, { useEffect } from 'react';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
-import { Slot, useRouter, useSegments, Stack } from 'expo-router';
+import {
+  GreatVibes_400Regular,
+} from '@expo-google-fonts/great-vibes';
+import {
+  PlayfairDisplay_400Regular,
+  PlayfairDisplay_600SemiBold,
+} from '@expo-google-fonts/playfair-display';
 import { useFonts } from 'expo-font';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useAuthStore } from '../store';
+import { useEffect } from 'react';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { Colors } from '../constants/Colors';
+import { useAuthStore } from '../store';
 
 // Prevent splash screen from auto-hiding
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
+    'PlayfairDisplay-Regular': PlayfairDisplay_400Regular,
+    'PlayfairDisplay-SemiBold': PlayfairDisplay_600SemiBold,
+    'GreatVibes-Regular': GreatVibes_400Regular,
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 

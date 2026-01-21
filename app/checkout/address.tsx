@@ -7,6 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { AddressData, AddressForm } from '../../components/AddressForm';
 import { Toast, useToast } from '../../components/common';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { supabase } from '../../lib/supabase';
 
 export default function AddressScreen() {
@@ -52,7 +53,7 @@ export default function AddressScreen() {
 
             console.log('Updating address for purchase:', purchaseId, 'User:', user.id);
 
-            const { error, count } = await supabase
+            const { data, error } = await supabase
                 .from('purchases')
                 .update({
                     recipient_name: addressData.recipient_name,
@@ -63,11 +64,11 @@ export default function AddressScreen() {
                     updated_at: new Date().toISOString(),
                 })
                 .eq('id', purchaseId)
-                .select('id', { count: 'exact' });
+                .select('id');
 
             if (error) throw error;
 
-            if (count === 0) {
+            if (!data || data.length === 0) {
                 console.error('No rows updated. Possible RLS issue or wrong ID.');
                 throw new Error('Sipariş güncellenemedi (İzin hatası veya kayıt bulunamadı).');
             }
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     content: {
@@ -166,6 +167,7 @@ const styles = StyleSheet.create({
         color: Colors.light.textSecondary,
         marginBottom: 24,
         textAlign: 'center',
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     submitButton: {
         backgroundColor: Colors.light.primary,
@@ -180,6 +182,6 @@ const styles = StyleSheet.create({
     submitButtonText: {
         color: '#fff',
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
 });

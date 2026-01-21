@@ -8,6 +8,7 @@ import {
     View
 } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface ConfirmModalProps {
     visible: boolean;
@@ -148,13 +149,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
         marginBottom: 8,
         textAlign: 'center',
     },
     message: {
         fontSize: 15,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textSecondary,
         textAlign: 'center',
         lineHeight: 22,
@@ -184,12 +186,12 @@ const styles = StyleSheet.create({
     },
     cancelButtonText: {
         fontSize: 15,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textSecondary,
     },
     confirmButtonText: {
         fontSize: 15,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: '#fff',
     },
 });

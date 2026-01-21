@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 export function GuestAccessCard() {
     return (
@@ -54,13 +55,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        fontWeight: '700',
         color: Colors.light.text,
         marginBottom: 2,
+        fontFamily: Typography.fontFamily.serif,
     },
     subtitle: {
         fontSize: 12,
         color: Colors.light.textSecondary,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     arrowContainer: {
         width: 32,

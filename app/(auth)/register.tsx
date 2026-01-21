@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import { ConfirmModal, Toast, useConfirmModal, useToast } from '../../components/common';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { useAuthStore } from '../../store';
 
 export default function RegisterScreen() {
@@ -233,13 +234,14 @@ const styles = StyleSheet.create({
   },
   welcomeText: {
     fontSize: 24,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
     marginBottom: 8,
   },
   subText: {
     fontSize: 16,
     color: Colors.light.textSecondary,
+    fontFamily: Typography.fontFamily.serifRegular,
     marginBottom: 32,
   },
   inputContainer: {
@@ -264,6 +266,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
+    fontFamily: Typography.fontFamily.serifRegular,
     color: Colors.light.text,
   },
   registerButton: {
@@ -282,7 +285,7 @@ const styles = StyleSheet.create({
   registerButtonText: {
     color: 'white',
     fontSize: 18,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
   },
   separatorContainer: {
     flexDirection: 'row',
@@ -298,6 +301,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     color: Colors.light.textMuted,
     fontSize: 14,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   socialButtonsContainer: {
     flexDirection: 'row',
@@ -328,10 +332,11 @@ const styles = StyleSheet.create({
   loginLinkText: {
     color: Colors.light.textSecondary,
     fontSize: 15,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   loginLink: {
     color: Colors.light.primary,
     fontSize: 15,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
   },
 });

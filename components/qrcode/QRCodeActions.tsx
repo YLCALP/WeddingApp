@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface QRCodeActionsProps {
     onShare: () => void;
@@ -44,6 +45,6 @@ const styles = StyleSheet.create({
         marginTop: 6,
         fontSize: 14,
         color: Colors.light.text,
-        fontWeight: '500',
+        fontFamily: Typography.fontFamily.serifRegular,
     },
 });

@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface ProfileCardProps {
     name: string;
@@ -53,11 +54,12 @@ const styles = StyleSheet.create({
     },
     name: {
         fontSize: 18,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     email: {
         fontSize: 14,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textSecondary,
         marginTop: 4,
     },

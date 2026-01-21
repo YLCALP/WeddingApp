@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface DashboardHeaderProps {
     userName: string;
@@ -17,7 +18,7 @@ export function DashboardHeader({
         <View style={styles.header}>
             <View>
                 <Text style={styles.greeting}>Merhaba,</Text>
-                <Text style={styles.userName}>{userName} 👋</Text>
+                <Text style={styles.userName}>{userName}</Text>
             </View>
             {showNotification && (
                 <TouchableOpacity style={styles.notificationButton} onPress={onNotificationPress}>
@@ -38,10 +39,11 @@ const styles = StyleSheet.create({
     greeting: {
         fontSize: 14,
         color: Colors.light.textSecondary,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     userName: {
         fontSize: 24,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
         marginTop: 4,
     },

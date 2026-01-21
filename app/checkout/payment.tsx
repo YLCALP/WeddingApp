@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView } from 'react-native-webview';
 import { Toast, useToast } from '../../components/common';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { supabase } from '../../lib/supabase';
 
 export default function PaymentScreen() {
@@ -231,13 +232,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     loadingText: {
         marginTop: 16,
         fontSize: 16,
         color: Colors.light.textSecondary,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     errorText: {
         marginTop: 12,
@@ -245,6 +247,7 @@ const styles = StyleSheet.create({
         color: Colors.light.text,
         textAlign: 'center',
         marginBottom: 20,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     retryButton: {
         backgroundColor: Colors.light.primary,
@@ -254,7 +257,7 @@ const styles = StyleSheet.create({
     },
     retryButtonText: {
         color: '#fff',
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
     backButtonSimple: {
         marginTop: 16,
@@ -262,6 +265,7 @@ const styles = StyleSheet.create({
     },
     backButtonText: {
         color: Colors.light.textSecondary,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     webviewLoading: {
         position: 'absolute',

@@ -10,6 +10,7 @@ import {
     View,
 } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { formatBytes, formatCurrency } from './utils';
 
 interface OrdersModalProps {
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
     },
     modalTitle: {
         fontSize: 20,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     emptyState: {
@@ -146,6 +147,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
     },
     emptyText: {
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textMuted,
     },
     orderCard: {
@@ -168,7 +170,7 @@ const styles = StyleSheet.create({
         marginBottom: 12,
     },
     packageName: {
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         fontSize: 18,
         color: Colors.light.text,
     },
@@ -180,7 +182,7 @@ const styles = StyleSheet.create({
     },
     statusText: {
         fontSize: 12,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.secondary,
     },
     orderMeta: {
@@ -195,6 +197,7 @@ const styles = StyleSheet.create({
     },
     metaText: {
         fontSize: 13,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textSecondary,
     },
     itemsSection: {
@@ -207,7 +210,7 @@ const styles = StyleSheet.create({
     },
     itemsSectionTitle: {
         fontSize: 12,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.textMuted,
         marginBottom: 8,
     },
@@ -218,11 +221,13 @@ const styles = StyleSheet.create({
     },
     itemName: {
         fontSize: 14,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.text,
     },
     itemPrice: {
         fontSize: 14,
         color: Colors.light.text,
+        fontFamily: Typography.fontFamily.serifRegular,
         fontWeight: '500',
     },
     totalRow: {
@@ -233,12 +238,12 @@ const styles = StyleSheet.create({
     },
     totalLabel: {
         fontSize: 15,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.textSecondary,
     },
     totalValue: {
         fontSize: 20,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.primary,
     },
 });

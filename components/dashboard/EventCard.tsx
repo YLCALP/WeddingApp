@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface Event {
     event_type: 'wedding' | 'engagement';
@@ -94,14 +95,14 @@ const styles = StyleSheet.create({
     },
     eventBadgeText: {
         fontSize: 12,
-        fontWeight: '600',
         color: Colors.light.primary,
+        fontFamily: Typography.fontFamily.serif,
     },
     eventTitle: {
         fontSize: 22,
-        fontWeight: '700',
         color: Colors.light.text,
         marginBottom: 12,
+        fontFamily: Typography.fontFamily.serif,
     },
     eventDetail: {
         flexDirection: 'row',
@@ -112,6 +113,7 @@ const styles = StyleSheet.create({
     eventDetailText: {
         fontSize: 14,
         color: Colors.light.textSecondary,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     editEventButton: {
         flexDirection: 'row',
@@ -126,7 +128,7 @@ const styles = StyleSheet.create({
     },
     editEventButtonText: {
         fontSize: 13,
-        fontWeight: '600',
         color: Colors.light.text,
+        fontFamily: Typography.fontFamily.serif,
     },
 });

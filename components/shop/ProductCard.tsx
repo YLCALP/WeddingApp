@@ -1,5 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { Product, formatCurrency } from './types';
 
 interface ProductCardProps {
@@ -62,14 +63,14 @@ const styles = StyleSheet.create({
     },
     productName: {
         fontSize: 14,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
         marginBottom: 4,
         height: 40,
     },
     productPrice: {
         fontSize: 14,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.primary,
         marginBottom: 8,
     },
@@ -81,6 +82,7 @@ const styles = StyleSheet.create({
     },
     ruleText: {
         fontSize: 10,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textMuted,
         backgroundColor: '#f5f5f5',
         paddingHorizontal: 4,
@@ -94,7 +96,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 4,
         paddingVertical: 2,
         borderRadius: 4,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
     addButton: {
         backgroundColor: Colors.light.secondary + '20',
@@ -105,6 +107,6 @@ const styles = StyleSheet.create({
     addButtonText: {
         color: Colors.light.secondary,
         fontSize: 12,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
 });

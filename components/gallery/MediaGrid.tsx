@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { ActivityIndicator, FlatList, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { COLUMN_COUNT, MediaGridItem } from './MediaGridItem';
 
 interface MediaItem {
@@ -74,6 +75,7 @@ const styles = StyleSheet.create({
     emptyText: {
         marginTop: 16,
         fontSize: 16,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textMuted,
     },
 });

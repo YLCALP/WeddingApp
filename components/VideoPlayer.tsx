@@ -1,6 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, ViewStyle } from 'react-native';
 import { useVideoPlayer, VideoView } from 'expo-video';
+import { StyleSheet, View, ViewStyle } from 'react-native';
 
 interface VideoPlayerProps {
   uri: string;
@@ -15,10 +14,11 @@ export default function VideoPlayer({ uri, style }: VideoPlayerProps) {
 
   return (
     <View style={[styles.container, style]}>
-      <VideoView 
-        style={styles.video} 
-        player={player} 
+      <VideoView
+        style={styles.video}
+        player={player}
         allowsPictureInPicture
+
       />
     </View>
   );

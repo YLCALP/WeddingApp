@@ -3,6 +3,7 @@ import React from 'react';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 const { width } = Dimensions.get('window');
 const QR_SIZE = width - 160;
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     },
     eventNames: {
         fontSize: 18,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     qrContainer: {
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
     codeText: {
         marginTop: 10,
         fontSize: 14,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.mono,
         color: Colors.light.textSecondary,
         letterSpacing: 3,
     },

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
-import { Colors } from '../constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
+import React, { useState } from 'react';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { Colors } from '../constants/Colors';
+import { Typography } from '../constants/Typography';
 
 export interface AddressData {
     recipient_name: string;
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     inputGroup: {
@@ -122,6 +123,7 @@ const styles = StyleSheet.create({
     },
     label: {
         fontSize: 13,
+        fontFamily: Typography.fontFamily.serif,
         fontWeight: '500',
         color: Colors.light.textSecondary,
         marginBottom: 6,
@@ -133,6 +135,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 10,
         fontSize: 14,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.text,
     },
     textArea: {

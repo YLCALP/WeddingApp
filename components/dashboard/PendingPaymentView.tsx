@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { RefreshControl, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { DashboardHeader } from './DashboardHeader';
 import { EventCard } from './EventCard';
 import { OrderDetailsCard } from './OrderDetailsCard';
@@ -154,16 +155,17 @@ const styles = StyleSheet.create({
     },
     pendingTitle: {
         fontSize: 20,
-        fontWeight: '700',
         color: Colors.light.text,
         marginBottom: 8,
         textAlign: 'center',
+        fontFamily: Typography.fontFamily.serif,
     },
     pendingText: {
         fontSize: 14,
         color: Colors.light.textSecondary,
         textAlign: 'center',
         lineHeight: 20,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     payButton: {
         flexDirection: 'row',
@@ -178,6 +180,6 @@ const styles = StyleSheet.create({
     payButtonText: {
         color: '#fff',
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
 });

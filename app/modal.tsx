@@ -4,6 +4,8 @@ import { Platform, StyleSheet } from 'react-native';
 import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
 
+import { Typography } from '../constants/Typography';
+
 export default function ModalScreen() {
   return (
     <View style={styles.container}>
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: Typography.fontFamily.serif,
   },
   separator: {
     marginVertical: 30,

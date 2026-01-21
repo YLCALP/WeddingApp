@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import { Toast, useToast } from '../../components/common';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { useAuthStore } from '../../store';
 
 export default function LoginScreen() {
@@ -182,13 +183,14 @@ const styles = StyleSheet.create({
   },
   appName: {
     fontSize: 32,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.primary,
     letterSpacing: 0.5,
   },
   tagline: {
     fontSize: 16,
     color: Colors.light.textSecondary,
+    fontFamily: Typography.fontFamily.cursive,
     marginTop: 4,
   },
   formContainer: {
@@ -196,13 +198,14 @@ const styles = StyleSheet.create({
   },
   welcomeText: {
     fontSize: 24,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
     marginBottom: 8,
   },
   subText: {
     fontSize: 16,
     color: Colors.light.textSecondary,
+    fontFamily: Typography.fontFamily.serifRegular,
     marginBottom: 32,
   },
   inputContainer: {
@@ -227,6 +230,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
+    fontFamily: Typography.fontFamily.serifRegular,
     color: Colors.light.text,
   },
   forgotPassword: {
@@ -236,7 +240,7 @@ const styles = StyleSheet.create({
   forgotPasswordText: {
     color: Colors.light.primary,
     fontSize: 14,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
   },
   loginButton: {
     backgroundColor: Colors.light.primary,
@@ -253,7 +257,7 @@ const styles = StyleSheet.create({
   loginButtonText: {
     color: 'white',
     fontSize: 18,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
   },
   separatorContainer: {
     flexDirection: 'row',
@@ -269,6 +273,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     color: Colors.light.textMuted,
     fontSize: 14,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   socialButtonsContainer: {
     flexDirection: 'row',
@@ -299,10 +304,11 @@ const styles = StyleSheet.create({
   registerText: {
     color: Colors.light.textSecondary,
     fontSize: 15,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
   registerLink: {
     color: Colors.light.primary,
     fontSize: 15,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
   },
 });

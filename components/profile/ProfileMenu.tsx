@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface MenuItem {
     icon: string;
@@ -77,6 +78,7 @@ const styles = StyleSheet.create({
     },
     menuLabel: {
         fontSize: 16,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.text,
     },
 });

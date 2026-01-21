@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface QRCodeHeaderProps {
     title?: string;
@@ -25,12 +26,13 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 24,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
         marginBottom: 4,
     },
     subtitle: {
         fontSize: 15,
+        fontFamily: Typography.fontFamily.serifRegular,
         color: Colors.light.textSecondary,
         textAlign: 'center',
     },

@@ -17,6 +17,7 @@ import {
 import { z } from 'zod';
 import { Toast, useToast } from '../../components/common';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { resetPassword } from '../../lib/supabase';
 
 const forgotPasswordSchema = z.object({
@@ -196,13 +197,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
     marginBottom: 12,
   },
   subtitle: {
     fontSize: 15,
     color: Colors.light.textSecondary,
+    fontFamily: Typography.fontFamily.serifRegular,
     textAlign: 'center',
     lineHeight: 22,
     paddingHorizontal: 20,
@@ -234,6 +236,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 52,
     fontSize: 16,
+    fontFamily: Typography.fontFamily.serifRegular,
     color: Colors.light.text,
   },
   errorText: {
@@ -258,7 +261,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
   },
   backToLogin: {
     flexDirection: 'row',
@@ -269,7 +272,7 @@ const styles = StyleSheet.create({
   backToLoginText: {
     color: Colors.light.primary,
     fontSize: 14,
-    fontWeight: '500',
+    fontFamily: Typography.fontFamily.serif,
   },
   successContainer: {
     flex: 1,
@@ -282,7 +285,7 @@ const styles = StyleSheet.create({
   },
   successTitle: {
     fontSize: 24,
-    fontWeight: '700',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.text,
     marginBottom: 12,
   },
@@ -292,5 +295,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 22,
     marginBottom: 32,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
 });

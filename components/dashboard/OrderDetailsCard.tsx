@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 interface PurchaseItem {
     id: string;
@@ -89,9 +90,9 @@ export function OrderDetailsCard({ purchase, purchaseItems }: OrderDetailsCardPr
 const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 18,
-        fontWeight: '600',
         color: Colors.light.text,
         marginBottom: 16,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     orderDetailsCard: {
         backgroundColor: Colors.light.surface,
@@ -115,19 +116,20 @@ const styles = StyleSheet.create({
     },
     orderItemName: {
         fontSize: 14,
-        fontWeight: '500',
         color: Colors.light.text,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     orderItemPrice: {
         fontSize: 14,
-        fontWeight: '600',
         color: Colors.light.text,
+        fontFamily: Typography.fontFamily.serif,
     },
     customizationText: {
         fontSize: 12,
         color: Colors.light.textSecondary,
         fontStyle: 'italic',
         marginTop: 2,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     orderTotal: {
         flexDirection: 'row',
@@ -138,12 +140,12 @@ const styles = StyleSheet.create({
     },
     orderTotalLabel: {
         fontSize: 16,
-        fontWeight: '600',
         color: Colors.light.text,
+        fontFamily: Typography.fontFamily.serif,
     },
     orderTotalAmount: {
         fontSize: 20,
-        fontWeight: '700',
         color: Colors.light.primary,
+        fontFamily: Typography.fontFamily.serif,
     },
 });

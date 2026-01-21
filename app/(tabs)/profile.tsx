@@ -10,6 +10,7 @@ import {
   ProfileMenu,
 } from '../../components/profile';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { supabase } from '../../lib/supabase';
 import { useAuthStore } from '../../store';
 
@@ -222,7 +223,7 @@ const styles = StyleSheet.create({
   },
   logoutText: {
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: Typography.fontFamily.serif,
     color: Colors.light.error,
   },
   version: {
@@ -230,5 +231,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: Colors.light.textMuted,
     marginTop: 24,
+    fontFamily: Typography.fontFamily.serifRegular,
   },
 });

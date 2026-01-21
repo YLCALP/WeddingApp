@@ -1,16 +1,16 @@
 
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 export default function SuccessScreen() {
     const router = useRouter();
 
     const handleHome = () => {
-        router.replace('/(tabs)/');
+        router.replace('/(tabs)');
     };
 
     return (
@@ -19,7 +19,7 @@ export default function SuccessScreen() {
                 <View style={styles.iconContainer}>
                     <Ionicons name="checkmark-circle" size={100} color={Colors.light.success} />
                 </View>
-                
+
                 <Text style={styles.title}>Ödeme Başarılı!</Text>
                 <Text style={styles.message}>
                     Siparişiniz başarıyla alındı. Etkinliğiniz artık aktif ve özelliklere tam erişim sağlayabilirsiniz.
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 28,
-        fontWeight: 'bold',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
         marginBottom: 16,
         textAlign: 'center',
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         lineHeight: 24,
         marginBottom: 48,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     homeButton: {
         backgroundColor: Colors.light.primary,
@@ -81,6 +82,6 @@ const styles = StyleSheet.create({
     homeButtonText: {
         color: '#fff',
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
 });

@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { Animated, StyleSheet, Text } from 'react-native';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 
 type ToastType = 'success' | 'error' | 'info' | 'warning';
 
@@ -91,6 +92,6 @@ const styles = StyleSheet.create({
     toastText: {
         color: '#fff',
         fontSize: 15,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
 });

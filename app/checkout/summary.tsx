@@ -5,6 +5,7 @@ import { ActivityIndicator, ScrollView, StyleSheet, Text, TouchableOpacity, View
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ConfirmModal, Toast, useConfirmModal, useToast } from '../../components/common';
 import { Colors } from '../../constants/Colors';
+import { Typography } from '../../constants/Typography';
 import { supabase } from '../../lib/supabase';
 import { useAuthStore, useEventStore } from '../../store';
 
@@ -267,7 +268,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     content: {
@@ -288,13 +289,14 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: Colors.light.text,
         lineHeight: 20,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     section: {
         marginBottom: 24,
     },
     sectionTitle: {
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
         marginBottom: 12,
     },
@@ -319,23 +321,25 @@ const styles = StyleSheet.create({
     },
     itemName: {
         fontSize: 14,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     itemSub: {
         fontSize: 12,
         color: Colors.light.textSecondary,
         marginTop: 2,
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     itemCustom: {
         fontSize: 12,
         color: Colors.light.textSecondary,
         marginTop: 4,
         fontStyle: 'italic',
+        fontFamily: Typography.fontFamily.serifRegular,
     },
     itemPrice: {
         fontSize: 14,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     footer: {
@@ -351,12 +355,12 @@ const styles = StyleSheet.create({
     },
     totalLabel: {
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.text,
     },
     totalValue: {
         fontSize: 20,
-        fontWeight: '700',
+        fontFamily: Typography.fontFamily.serif,
         color: Colors.light.primary,
     },
     actions: {
@@ -384,12 +388,12 @@ const styles = StyleSheet.create({
     },
     cancelBtnText: {
         color: Colors.light.error,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         fontSize: 14,
     },
     confirmBtnText: {
         color: '#fff',
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
         fontSize: 14,
     },
 });

@@ -9,6 +9,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { Typography } from '../../constants/Typography';
 import VideoPlayer from '../VideoPlayer';
 
 const { width } = Dimensions.get('window');
@@ -127,12 +128,13 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: 'white',
         textAlign: 'center',
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
     modalNoteAuthor: {
         marginTop: 20,
-        fontSize: 18,
+        fontSize: 24, // Increased size for cursive
         color: '#ddd',
+        fontFamily: Typography.fontFamily.cursive,
     },
     modalFooter: {
         position: 'absolute',
@@ -152,6 +154,6 @@ const styles = StyleSheet.create({
     deleteText: {
         color: '#ff4444',
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: Typography.fontFamily.serif,
     },
 });
