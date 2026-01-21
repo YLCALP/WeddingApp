@@ -11,11 +11,11 @@ import { NoEventView } from '../../components/common';
 import {
   DashboardHeader,
   EventCard,
-  MediaStatsGrid,
+  GalleryPreviewCard,
+  GuestAccessCard,
   PendingBanner,
   PendingPaymentView,
-  QuickActions,
-  StorageCard,
+  VideoHighlightCard
 } from '../../components/dashboard';
 import { Colors } from '../../constants/Colors';
 import { useAuthStore, useEventStore } from '../../store';
@@ -58,12 +58,35 @@ export default function DashboardScreen() {
     setRefreshing(false);
   };
 
-  const mediaStats = {
-    photos: media.filter((m) => m.type === 'photo').length,
-    videos: media.filter((m) => m.type === 'video').length,
-    audios: media.filter((m) => m.type === 'audio').length,
-    notes: media.filter((m) => m.type === 'note').length,
-  };
+  // Get random images for cards
+  const galleryCover = React.useMemo(() => {
+    const photos = media.filter(m => m.type === 'photo' && m.publicUrl);
+    if (photos.length > 0) {
+      const randomIndex = Math.floor(Math.random() * photos.length);
+      return photos[randomIndex].publicUrl;
+    }
+    return undefined;
+  }, [media]);
+
+  const videoData = React.useMemo(() => {
+    const videos = media.filter(m => m.type === 'video' && m.publicUrl);
+
+    if (videos.length > 0) {
+      const randomIndex = Math.floor(Math.random() * videos.length);
+      return { type: 'video', url: videos[randomIndex].publicUrl };
+    }
+
+    // Fallback to random photo if no video
+    const photos = media.filter(m => m.type === 'photo' && m.publicUrl && m.publicUrl !== galleryCover);
+    if (photos.length > 0) {
+      const randomIndex = Math.floor(Math.random() * photos.length);
+      return { type: 'image', url: photos[randomIndex].publicUrl };
+    }
+
+    return { type: 'none', url: undefined };
+  }, [media, galleryCover]);
+
+  const totalMemories = media.length;
 
   // Loading state
   if (isLoading && !refreshing) {
@@ -128,14 +151,14 @@ export default function DashboardScreen() {
 
       <EventCard event={event} onEditPress={() => router.push('/edit-event')} />
 
-      <StorageCard
-        usedBytes={event.storage_used_bytes}
-        limitBytes={event.storage_limit_bytes}
+      <GalleryPreviewCard totalMedia={totalMemories} coverImage={galleryCover} />
+
+      <VideoHighlightCard
+        videoSource={videoData.type === 'video' ? videoData.url : undefined}
+        coverImage={videoData.type === 'image' ? videoData.url : undefined}
       />
 
-      <MediaStatsGrid stats={mediaStats} />
-
-      <QuickActions />
+      <GuestAccessCard />
     </ScrollView>
   );
 }
